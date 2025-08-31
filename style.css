@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ECEFCA;
+}
+
+header {
+  font-family: 'Outfit', sans-serif;
+  margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+  height: 600px;
+}
+
+.vertical-left, .vertical-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 80px;
+  width: 300px;
+  overflow: hidden;
+  height: 600px;
+}
+
+.vertical-left p,
+.vertical-right p {
+  display: inline-block;
+  white-space: nowrap; 
+  margin: 0;
+}
+
+.vertical-left p {
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  margin-left: 200px;
+}
+
+.vertical-right p {
+  transform: rotate(90deg);
+  transform-origin: right top;
+  margin-right: 200px;
+}
+
+.vertical-right {
+   position: relative;
+}
+
+.vertical-right img {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 5;
+  margin-bottom: 20px;
+}
+
+.back {
+  width: 60%;
+  margin: 0 auto;
+  /* 背景画像 */
+  background-image: url("img/back-img00.png");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  border-right: 28px solid #547792;
+  border-left: 28px solid #547792 ;
+}
+
+.square {
+  display: flex;
+  flex-direction: column; 
+  width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  height: 500px;
+  margin-top: 50px;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.back-square {
+  width: 450px;
+  height: 100px;
+  background-color: #333;   
+  transition: background-color 0.6s;
+}
+
+.arrow-icon {
+  display: flex;
+}
+
+/* ここからanimationとhover */
+.back-square:hover {
+  cursor: pointer;
+}
+
+#sample01:hover {
+  background-image: url(img/sample01.png);
+}
+
+#sample02:hover {
+  background-image: url(img/sample02.png);
+}
+
+#sample03:hover {
+  background-image: url(img/sample03.png);
+}
+
+#sample04:hover {
+  background-image: url(img/sample04.png);
+}
+
+.marquee-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 60px;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  height: 60px;
+  margin: 0 auto;
+  align-items: center;
+  /* アニメーション */
+  width: max-content;
+  animation: scroll-left linear infinite;
+}
+
+.text p {
+  font-size: 40px;
+  margin-right: 42px;
+  margin-left: 8px;
+  /* アニメーション */
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.vertical-right img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+/* メディアクエリ */
+@media (max-width: 990px) {
+  .vertical-right, .vertical-left {
+    display: none;
+  }
+  .square {
+    width: 90%;
+  }
+  .back-square {
+    width: 100%;
+  }
+}
+
+/* ここから追加 */
+.works-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 80px;
+}
+
+h1 {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.works-flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.works-flex img {
+  width: 90%;
+  border: 3px solid #333;
+}
+
+.works-flex p {
+  margin-top: 8px;
+}
+
+.main-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  background-image: url(img/back-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.skill-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skill-text {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
+.skill-text img {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.icon-png {
+  width: 100%;
+  height: 80%;
+  padding-top: 12px;
+}
+
+.skill-text p {
+  width: 80%;
+  margin-left: 1px;
+  margin-top: 4px;
+  line-height: 32px;
+}
+
+.right {
+  width: 70%;
+  padding-left: 20px;
+}
+
+.about-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.about-flex {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.about-flex img {
+  border-radius: 50%;
+  padding-top: 10px;
+  width: 30%;
+  height: 30%;
+  margin: 0 auto
+}
+
+.about-text {
+  margin: 16px;
+  border-radius: 20px;
+  padding-bottom: 40px;
+  margin-left: 40px;
+  background-color: #547792;
+}
+
+.about-text h3 {
+  padding: 32px 0;
+  font-size: 28px;
+  color: #eee;
+}
+
+.about-text h3, p {
+  margin: 0 40px 0 60px;
+}
+
+.about-text p {
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #eee;
+}
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
+  background-color: #94B4C1;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+/* 作品紹介のモーダル */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;  
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.modal-content img:hover {
+  cursor: pointer;
+}
+
+.mock {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mock h2 {
+  margin: 24px 0;
+}
+
+.mock h3 {
+  margin-top: 24px;
+}
+
+h1, h2, h3, p {
+  font-family: 'Merriweather', serif;
+  color: #333;
+}
+
+.open-modal:hover {
+  cursor: pointer;
+}
+
+.works-modal:hover {
+  opacity: 50px;
+}
+
+/* 項目アニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3.5s ease, transform 3.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mock p {
+  line-height: 30px;
+}
+
+.works-flex img:hover {
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}

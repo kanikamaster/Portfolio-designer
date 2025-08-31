@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/neco-icon.png" type="image/png">
+</head>
+
+<body>
+  <header>
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="track">
+        <div class="text" id="marquee">
+        <p>think</p>
+        <p>design</p>
+        <p>build</p>
+        <p>imagine</p>
+        <p>create</p>
+        <p>inspire</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="vertical-left">
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+      </div>
+      <div class="back">
+        <div class="square">
+          <div class="back-square open-modal" id="sample04" data-target="modal8"></div>
+          <div class="back-square  open-modal" id="sample01" data-target="modal5"></div>
+          <div class="back-square  open-modal" id="sample02" data-target="modal6"></div>
+          <div class="back-square  open-modal" id="sample03" data-target="modal7"></div>
+        </div>
+      </div>
+      <div class="vertical-right">
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <img src="img/neco-icon.png" alt="猫のアイコン" width="100px" height="100px" class="open-modal" id="sample04" data-target="modal8">
+      </div>
+    </div>
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="track">
+        <div class="text" id="down">
+          <p>think</p>
+          <p>design</p>
+          <p>build</p>
+          <p>imagine</p>
+          <p>create</p>
+          <p>inspire</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <!-- JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const marquee = document.getElementById('marquee');
+
+      if (!marquee.dataset.cloned) {
+        const clone = marquee.cloneNode(true);
+        clone.removeAttribute("id"); // ID重複防止
+        marquee.parentElement.appendChild(clone);
+        marquee.dataset.cloned = "true";
+
+        // アニメーション速度調整
+        const totalWidth = marquee.offsetWidth;
+        const speed = 50; // px/秒
+        const duration = totalWidth / speed;
+
+        marquee.style.animationDuration = duration + 's';
+        clone.style.animation = marquee.style.animation;
+        clone.style.animationDuration = duration + 's';
+      }
+    });
+
+    // 2つ目
+    document.addEventListener('DOMContentLoaded', () => {
+      const down = document.getElementById('down');
+
+      if (!down.dataset.cloned) {
+        const clone = down.cloneNode(true);
+        clone.removeAttribute("id"); // ID重複防止
+        down.parentElement.appendChild(clone);
+        down.dataset.cloned = "true";
+
+        // アニメーション速度調整
+        const totalWidth = down.offsetWidth;
+        const speed = 50; // px/秒
+        const duration = totalWidth / speed;
+
+        down.style.animationDuration = duration + 's';
+        clone.style.animation = down.style.animation;
+        clone.style.animationDuration = duration + 's';
+      }
+    });
+  </script>
+
+  <main>
+    <div class="works-wrapper fade-in">
+      <h1>WORKS</h1>
+      <div class="works-flex">
+        <!--  トリガーボタン  -->
+        <div>
+          <img src="img/works04.png" alt="作品4" class="open-modal" data-target="modal4">
+          <p>ポートフォリオサイト</p>
+        </div>
+        <div>
+          <img src="img/works01.png" alt="作品1" class="open-modal works-modal" data-target="modal1">
+          <p>企業サイト</p>
+        </div>
+        <div>
+          <img src="img/works02.png" alt="作品2" class="open-modal" data-target="modal2">
+          <p>カフェDOLLY</p>
+        </div>
+        <div>
+          <img src="img/works03.png" alt="作品3" class="open-modal" data-target="modal3">
+          <p>甲信州別館</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper fade-in">
+      <div class="skill-wrapper">
+        <h1>SKILL</h1>
+        <div class="grid">
+          <div class="skill-text">
+            <img src="img/html5.svg" alt="HTML5のロゴ">
+            <div class="right">
+              <h2>HTML/CSS</h2>
+              <p>
+                複数のプログラミング学習サイトで独学しました。レスポンシブデザインが可能です。コーディングはVScodeを使用しています。
+              </p>
+            </div>
+          </div>
+
+          <div class="skill-text">
+            <img src="img/js.svg" alt="JSのロゴ">
+            <div class="right">
+              <h2>JS</h2>
+              <p>
+                基本的なコードに対応できます。複雑なコードは外部資料を参考しています。現在、最も興味のある言語です。
+              </p>
+            </div>
+          </div>
+
+          <div class="skill-text">
+            <img src="img/figma.svg" alt="Figmaのロゴ" class="icon-png">
+            <div class="right">
+              <h2>Figma</h2>
+              <p>
+                掲載作品のワイヤーフレームはFigma、画像加工はCanvaを使用しています。問題なく使用することができます。
+              </p>
+            </div>
+          </div>
+
+          <div class="skill-text">
+            <img src="img/illustrator.svg" alt="illustratorのロゴ" class="icon-png">
+            <div class="right">
+              <h2>Photoshop・Illustrator</h2>
+              <p>
+                現在、上記のソフトは未使用ですが、入社後すぐに学習する予定です。書籍での学習を継続中です。
+              </p>
+            </div>
+          </div>
+
+          <div class="skill-text">
+            <img src="img/github.svg" alt="Githubのロゴ">
+            <div class="right">
+              <h2>Github</h2>
+              <p>
+                Reactで簡単なアプリを作った際に使用していたため、基本的な操作が可能です。ポートフォリオ内の作品はすべてpushしています
+              </p>
+            </div>
+          </div>
+
+          <div class="skill-text">
+            <img src="img/paint.svg" alt="イラストのロゴ" class="icon-png">
+            <div class="right">
+              <h2>Picture</h2>
+              <p>
+                趣味でイラストを描いています。ポートフォリオ内の猫のアイコンは自作イラストです。使用ソフトはClip Studioです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-wrapper fade-in">
+        <h1>ABOUT</h1>
+        <div class="about-flex">
+          <img src="img/neco-icon.png" alt="猫のアイコン">
+          <div class="about-text">
+            <h3>A.A</h3>
+            <p>
+              現在、未経験からWebデザイナーを目指してポートフォリオを制作しています。<br>
+              プログラミングの学習をする中で、Webデザインの「伝えたいことを徹底的に突き詰め、ユーザーにわかりやすい形で届ける」という点に興味を惹かれ、独学で学習しました。
+            </p><br>
+            <p>
+              イメージに合致する配色やレイアウトを実現させつつ、ユーザーにとって見やすいデザインを意識しています。<br>
+              ニーズに的確に応えられるスキルを身につけるため、書籍や学習サイトを用いた学習を継続中です。今後はPhotoshopやIllustratorの習得も予定しています。
+            </p><br>
+            <p>
+              未経験で独学のため、経験と学習を人一倍積み重ね、ゆくゆくは実務で通用するデザイナーになりたいと考えています。
+            </p><br>
+            <p>
+              どうぞよろしくお願いいたします。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      &copy; 2025 A.A All rights reserved.
+    </p>
+  </footer>
+
+
+  <!-- モーダル -->
+  <!-- 1つ目企業サイト -->
+  <div class="modal-overlay" id="modal1">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock01.png" alt="モック画像1" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>企業サイト (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>6人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          取引先企業・就職活動中の学生など、幅広い年代層をターゲットに想定し、装飾を抑えたシンプルなデザインを心がけました。情報の視認性を高めるため、四角での区切りや整列を多用し、要素を整理しています。
+        </p><br>
+        <p>
+          また、企業としての誠実さ・信頼感を印象付けるために、メインカラーにはクリーンな青と緑を採用しました。落ち着いた配色で、安心感のあるトーンに仕上げています。ページ全体でデザインの統一感・情報の集約性・アクセスのしやすさを重視しました。
+        </p>
+        <h3>サイト概要・制作について</h3>
+        <p>
+          以下の6ページを制作しました：<br>
+          トップページ／会社概要／事業内容／新着情報／お問い合わせ／採用情報
+        </p><br>
+        <p>  
+          ワイヤーフレームにはFigma、新着情報のタブ切り替えにはJavaScriptを使用しました。構成や導線は企業サイトに多い構造をベースに、ユーザーが迷わず目的の情報へアクセスできるよう配慮しました。全ページを通して、一貫したレイアウト設計を行っています。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 2つ目カフェ -->
+  <div class="modal-overlay" id="modal2">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock02.png" alt="モック画像2" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>カフェDOLLY (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>4人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          10〜20代の女性をターゲットに、可愛らしくガーリーな雰囲気のデザインに仕上げました。<br>
+          カフェの看板であるテディベアをサイトのシンボルとして設定し、ヘッダー・新着情報のボタン・背景画像などに多用することで「あのクマのカフェ」という印象が視覚的に残るよう意識しました。
+        </p>
+        <p><br>
+          配色はまろやかなピンクとアイボリーを基調に、締め色としてネイビーを使用しました。かわいらしさの中にも落ち着きがあり、カフェらしい「心地よさ」が伝わる色使いを意識しています。<br>
+          また、SNSでの共有を促すため、TwitterとInstagramのリンクをヘッダーに設置しました（※実際のリンクは非機能）。
+        </p>
+        <h3>サイト概要・制作について</h3>
+        <p>
+          以下の3ページを制作しました：<br>
+          トップページ／メニュー紹介ページ／新着情報ページ<br>
+        </p><br>
+        <p>
+          サイト全体で統一感のあるトーンを保ちつつ、女性ユーザーが直感的に操作しやすい構成とUIを意識しています。
+          構成・デザインはFigmaで制作し、イラストや装飾要素を活かして世界観を表現しました。<br>
+          新着情報セクションでは、クリックボタンにシンボルのクマを用いるなど、遊び心も加えています。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 3つ目旅館 -->
+  <div class="modal-overlay" id="modal3">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock03.png" alt="モック画像3" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>甲信州別館 (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>5人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          金銭的にゆとりがあり、自然の中で静かに癒されたいと考える30代以上の大人層をターゲットにした敷居の高い旅館サイトです（※予約前に「お子様不可」の記載あり）。
+        </p><br>
+        <p>
+          落ち着いた茶色とアイボリーをベースに、Zen Antiqueフォントを用いることで格調高さを演出しつつ、穏やかで安心感のあるトーンに仕上げました。<br>
+          旅館の和の雰囲気に合わせて基本は縦書きで構成していますが、予約関連の情報は横書き＋アクセントカラーの橙色を使うことで、視認性と誘導性を高めています。
+        </p>
+        <h3>サイト概要・制作について</h3>
+        <p>
+          2ページを制作しました：TOPページ／予約ページ
+        </p><br>
+        <p>
+          複数の実在旅館サイトを参考にし、構成・情報設計・トーンの方向性を研究した上で制作しました。<br>
+          特に予約ページでは、多くの旅館サイトが「素朴で機能重視」の作りであることを踏まえて、あえてシンプルな設計にしました。TOPページとは異なる機能性を持たせつつも、雰囲気の統一感は損なわないよう配慮しました。<br>
+          ※「ホームに戻る」以外のボタンはダミーで、機能は持たせていません。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 4つ目PFサイト -->
+  <div class="modal-overlay" id="modal4">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock04.png" alt="モック画像4" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>企業サイト (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>6人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          自身のポートフォリオサイトとして、視認性と丁寧さを兼ね備えた落ち着いたデザインを意識しました。<br>  
+          フォントは可読性の高いものを選び、全体のトーンとしては「新人らしい誠実さ」と「見やすさ」を両立させています。
+        <p><br>
+          メインカラーにはくすみブルーと淡いグリーンを使用し、爽やかで優しい印象に仕上げました。<br>ネイビーを締め色として加えることで、全体に統一感と深みを持たせています。<br>
+          アイコンの猫は自作イラストで、上記のカラーに合わせて制作して個性を出しました。
+        </p>
+        <p><br>
+          ヒーローエリアには図形（長方形・波・丸）や英語タイポグラフィを用いて、写真に頼らない構成で差別化を図りました。これはCDジャケットから着想を得ています。<br>
+          また、作品をしっかり見せたいという想いから、ヒーロー内の長方形にホバーすると作品画像が表示され、クリックで詳細ページへ遷移する仕掛けも実装しました。<br>
+          さらに、ベルトコンベア式に文字が流れるJSアニメーション（※コピペベース）を追加し、ユーザーの視線誘導と離脱防止を狙いました。
+        </p>
+        <h3>サイト概要・制作について</h3>
+         <p>
+          2ページを制作しました：TOPページ／作品詳細ページ
+        </p><br>
+        <p>
+          TOPページ<br>
+          - 作品一覧<br>
+          - スキル紹介<br>
+          - 自己紹介<br>
+        </p><br>
+        <p>
+          作品詳細ページ<br>
+          - PC・スマホのモックアップ画像<br>
+          - 作品の概要・意図<br>
+          - サイトの使用技術などの補足情報
+        </p><br>
+        <p>
+          各作品は画像クリックで紹介ページに切り替わる構成とし、実際に公開された際の使用感を補うためにモック画像を掲載しました。<br>
+          JavaScriptは一部参考コード（コピー）を活用し、ホバー・クリック演出などに使用しています。大きなアニメーションは控えめにし、内容の見やすさと集中しやすさを優先しています。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- トップの黒ボックス1つ目 PFサイト-->
+  <div class="modal-overlay" id="modal8">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock04.png" alt="モック画像4" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>企業サイト (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>6人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          自身のポートフォリオサイトとして、視認性と丁寧さを兼ね備えた落ち着いたデザインを意識しました。<br>  
+          フォントは可読性の高いものを選び、全体のトーンとしては「新人らしい誠実さ」と「見やすさ」を両立させています。
+        <p><br>
+          メインカラーにはくすみブルーと淡いグリーンを使用し、爽やかで優しい印象に仕上げました。<br>ネイビーを締め色として加えることで、全体に統一感と深みを持たせています。<br>
+          アイコンの猫は自作イラストで、上記のカラーに合わせて制作して個性を出しました。
+        </p>
+        <p><br>
+          ヒーローエリアには図形（長方形・波・丸）や英語タイポグラフィを用いて、写真に頼らない構成で差別化を図りました。これはCDジャケットから着想を得ています。<br>
+          また、作品をしっかり見せたいという想いから、ヒーロー内の長方形にホバーすると作品画像が表示され、クリックで詳細ページへ遷移する仕掛けも実装しました。<br>
+          さらに、ベルトコンベア式に文字が流れるJSアニメーション（※コピペベース）を追加し、ユーザーの視線誘導と離脱防止を狙いました。
+        </p>
+        <h3>サイト概要・制作について</h3>
+         <p>
+          2ページを制作しました：TOPページ／作品詳細ページ
+        </p><br>
+        <p>
+          TOPページ<br>
+          - 作品一覧<br>
+          - スキル紹介<br>
+          - 自己紹介<br>
+        </p><br>
+        <p>
+          作品詳細ページ<br>
+          - PC・スマホのモックアップ画像<br>
+          - 作品の概要・意図<br>
+          - サイトの使用技術などの補足情報
+        </p><br>
+        <p>
+          各作品は画像クリックで紹介ページに切り替わる構成とし、実際に公開された際の使用感を補うためにモック画像を掲載しました。<br>
+          JavaScriptは一部参考コード（コピー）を活用し、ホバー・クリック演出などに使用しています。大きなアニメーションは控えめにし、内容の見やすさと集中しやすさを優先しています。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- トップの黒ボックス2つ目 企業サイト-->
+  <div class="modal-overlay" id="modal5">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock01.png" alt="モック画像1" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>企業サイト (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>6人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          取引先企業・就職活動中の学生など、幅広い年代層をターゲットに想定し、装飾を抑えたシンプルなデザインを心がけました。情報の視認性を高めるため、四角での区切りや整列を多用し、要素を整理しています。
+        </p><br>
+        <p>
+          また、企業としての誠実さ・信頼感を印象付けるために、メインカラーにはクリーンな青と緑を採用しました。落ち着いた配色で、安心感のあるトーンに仕上げています。ページ全体でデザインの統一感・情報の集約性・アクセスのしやすさを重視しました。
+        </p>
+        <h3>サイト概要・制作について</h3>
+        <p>
+          以下の6ページを制作しました：<br>
+          トップページ／会社概要／事業内容／新着情報／お問い合わせ／採用情報
+        </p><br>
+        <p>  
+          ワイヤーフレームにはFigma、新着情報のタブ切り替えにはJavaScriptを使用しました。構成や導線は企業サイトに多い構造をベースに、ユーザーが迷わず目的の情報へアクセスできるよう配慮しました。全ページを通して、一貫したレイアウト設計を行っています。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- トップの黒ボックス3つ目 カフェ-->
+  <div class="modal-overlay" id="modal6">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock02.png" alt="モック画像2" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>カフェDOLLY (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>4人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          10〜20代の女性をターゲットに、可愛らしくガーリーな雰囲気のデザインに仕上げました。<br>
+          カフェの看板であるテディベアをサイトのシンボルとして設定し、ヘッダー・新着情報のボタン・背景画像などに多用することで「あのクマのカフェ」という印象が視覚的に残るよう意識しました。
+        </p>
+        <p><br>
+          配色はまろやかなピンクとアイボリーを基調に、締め色としてネイビーを使用しました。かわいらしさの中にも落ち着きがあり、カフェらしい「心地よさ」が伝わる色使いを意識しています。<br>
+          また、SNSでの共有を促すため、TwitterとInstagramのリンクをヘッダーに設置しました（※実際のリンクは非機能）。
+        </p>
+        <h3>サイト概要・制作について</h3>
+        <p>
+          以下の3ページを制作しました：<br>
+          トップページ／メニュー紹介ページ／新着情報ページ<br>
+        </p><br>
+        <p>
+          サイト全体で統一感のあるトーンを保ちつつ、女性ユーザーが直感的に操作しやすい構成とUIを意識しています。
+          構成・デザインはFigmaで制作し、イラストや装飾要素を活かして世界観を表現しました。<br>
+          新着情報セクションでは、クリックボタンにシンボルのクマを用いるなど、遊び心も加えています。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- トップの黒ボックス4つ目 旅館-->
+  <div class="modal-overlay" id="modal7">
+    <div class="modal-content">
+      <button class="close-modal">×</button>
+      <a href="#">
+        <img src="img/mock03.png" alt="モック画像3" width="80%" height="80%">
+      </a>
+      <div class="mock">
+        <h2>甲信州別館 (画像をクリックして閲覧できます)</h2>
+        <h3>URL ※入れる入れる入れる入れる入れる※</h3>
+        <h3>担当部分</h3>
+        <p>企画/デザイン/コーディング</p>
+        <h3>制作時間</h3>
+        <p>5人日</p>
+        <h3>デザインの意図</h3>
+        <p>
+          金銭的にゆとりがあり、自然の中で静かに癒されたいと考える30代以上の大人層をターゲットにした敷居の高い旅館サイトです（※予約前に「お子様不可」の記載あり）。
+        </p><br>
+        <p>
+          落ち着いた茶色とアイボリーをベースに、Zen Antiqueフォントを用いることで格調高さを演出しつつ、穏やかで安心感のあるトーンに仕上げました。<br>
+          旅館の和の雰囲気に合わせて基本は縦書きで構成していますが、予約関連の情報は横書き＋アクセントカラーの橙色を使うことで、視認性と誘導性を高めています。
+        </p>
+        <h3>サイト概要・制作について</h3>
+        <p>
+          2ページを制作しました：TOPページ／予約ページ
+        </p><br>
+        <p>
+          複数の実在旅館サイトを参考にし、構成・情報設計・トーンの方向性を研究した上で制作しました。<br>
+          特に予約ページでは、多くの旅館サイトが「素朴で機能重視」の作りであることを踏まえて、あえてシンプルな設計にしました。TOPページとは異なる機能性を持たせつつも、雰囲気の統一感は損なわないよう配慮しました。<br>
+          ※「ホームに戻る」以外のボタンはダミーで、機能は持たせていません。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const openButtons = document.querySelectorAll('.open-modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.target;
+        document.getElementById(targetId).style.display = 'flex';
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal-overlay').style.display = 'none';
+      });
+    });
+
+// 項目アニメーション
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
