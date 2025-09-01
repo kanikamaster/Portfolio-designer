@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,18 @@
     <div class="marquee-wrapper">
       <div class="marquee-track" id="track">
         <div class="text" id="marquee">
-        <p>think</p>
-        <p>design</p>
-        <p>build</p>
-        <p>imagine</p>
-        <p>create</p>
-        <p>inspire</p>
+          <p>think</p>
+          <p>design</p>
+          <p>build</p>
+          <p>imagine</p>
+          <p>create</p>
+          <p>inspire</p>
+          <p>think</p>
+          <p>design</p>
+          <p>build</p>
+          <p>imagine</p>
+          <p>create</p>
+          <p>inspire</p>
         </div>
       </div>
     </div>
@@ -49,12 +56,19 @@
         <p>portfolio</p>
         <p>portfolio</p>
         <p>portfolio</p>
-        <img src="img/neco-icon.png" alt="猫のアイコン" width="100px" height="100px" class="open-modal" id="sample04" data-target="modal8">
+        <img src="img/neco-icon.png" alt="猫のアイコン" width="100px" height="100px" class="open-modal" id="sample04"
+          data-target="modal8">
       </div>
     </div>
     <div class="marquee-wrapper">
       <div class="marquee-track" id="track">
         <div class="text" id="down">
+          <p>think</p>
+          <p>design</p>
+          <p>build</p>
+          <p>imagine</p>
+          <p>create</p>
+          <p>inspire</p>
           <p>think</p>
           <p>design</p>
           <p>build</p>
@@ -74,13 +88,13 @@
 
       if (!marquee.dataset.cloned) {
         const clone = marquee.cloneNode(true);
-        clone.removeAttribute("id"); // ID重複防止
+        clone.removeAttribute("id");
         marquee.parentElement.appendChild(clone);
         marquee.dataset.cloned = "true";
 
         // アニメーション速度調整
         const totalWidth = marquee.offsetWidth;
-        const speed = 50; // px/秒
+        const speed = 50;
         const duration = totalWidth / speed;
 
         marquee.style.animationDuration = duration + 's';
@@ -95,13 +109,13 @@
 
       if (!down.dataset.cloned) {
         const clone = down.cloneNode(true);
-        clone.removeAttribute("id"); // ID重複防止
+        clone.removeAttribute("id");
         down.parentElement.appendChild(clone);
         down.dataset.cloned = "true";
 
         // アニメーション速度調整
         const totalWidth = down.offsetWidth;
-        const speed = 50; // px/秒
+        const speed = 50;
         const duration = totalWidth / speed;
 
         down.style.animationDuration = duration + 's';
@@ -260,7 +274,7 @@
           以下の6ページを制作しました：<br>
           トップページ／会社概要／事業内容／新着情報／お問い合わせ／採用情報
         </p><br>
-        <p>  
+        <p>
           ワイヤーフレームにはFigma、新着情報のタブ切り替えにはJavaScriptを使用しました。構成や導線は企業サイトに多い構造をベースに、ユーザーが迷わず目的の情報へアクセスできるよう配慮しました。全ページを通して、一貫したレイアウト設計を行っています。
         </p>
       </div>
@@ -352,7 +366,7 @@
         <p>6人日</p>
         <h3>デザインの意図</h3>
         <p>
-          自身のポートフォリオサイトとして、視認性と丁寧さを兼ね備えた落ち着いたデザインを意識しました。<br>  
+          自身のポートフォリオサイトとして、視認性と丁寧さを兼ね備えた落ち着いたデザインを意識しました。<br>
           フォントは可読性の高いものを選び、全体のトーンとしては「新人らしい誠実さ」と「見やすさ」を両立させています。
         <p><br>
           メインカラーにはくすみブルーと淡いグリーンを使用し、爽やかで優しい印象に仕上げました。<br>ネイビーを締め色として加えることで、全体に統一感と深みを持たせています。<br>
@@ -364,7 +378,7 @@
           さらに、ベルトコンベア式に文字が流れるJSアニメーション（※コピペベース）を追加し、ユーザーの視線誘導と離脱防止を狙いました。
         </p>
         <h3>サイト概要・制作について</h3>
-         <p>
+        <p>
           2ページを制作しました：TOPページ／作品詳細ページ
         </p><br>
         <p>
@@ -403,7 +417,7 @@
         <p>6人日</p>
         <h3>デザインの意図</h3>
         <p>
-          自身のポートフォリオサイトとして、視認性と丁寧さを兼ね備えた落ち着いたデザインを意識しました。<br>  
+          自身のポートフォリオサイトとして、視認性と丁寧さを兼ね備えた落ち着いたデザインを意識しました。<br>
           フォントは可読性の高いものを選び、全体のトーンとしては「新人らしい誠実さ」と「見やすさ」を両立させています。
         <p><br>
           メインカラーにはくすみブルーと淡いグリーンを使用し、爽やかで優しい印象に仕上げました。<br>ネイビーを締め色として加えることで、全体に統一感と深みを持たせています。<br>
@@ -415,7 +429,7 @@
           さらに、ベルトコンベア式に文字が流れるJSアニメーション（※コピペベース）を追加し、ユーザーの視線誘導と離脱防止を狙いました。
         </p>
         <h3>サイト概要・制作について</h3>
-         <p>
+        <p>
           2ページを制作しました：TOPページ／作品詳細ページ
         </p><br>
         <p>
@@ -464,7 +478,7 @@
           以下の6ページを制作しました：<br>
           トップページ／会社概要／事業内容／新着情報／お問い合わせ／採用情報
         </p><br>
-        <p>  
+        <p>
           ワイヤーフレームにはFigma、新着情報のタブ切り替えにはJavaScriptを使用しました。構成や導線は企業サイトに多い構造をベースに、ユーザーが迷わず目的の情報へアクセスできるよう配慮しました。全ページを通して、一貫したレイアウト設計を行っています。
         </p>
       </div>
@@ -560,7 +574,7 @@
       });
     });
 
-// 項目アニメーション
+    // 項目アニメーション
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -574,4 +588,5 @@
     });
   </script>
 </body>
+
 </html>
