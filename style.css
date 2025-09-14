@@ -409,3 +409,59 @@ h1, h2, h3, p {
   box-shadow: 0 30px 20px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
 }
+
+/* スマホ(width:400px) */
+@media (max-width: 400px) {
+  header {
+    margin: 0;
+  }
+  .flex {
+    height: 100%;
+  }
+  header p {
+    font-size: 4px;
+  }
+  .back {
+    width: 80%;
+  }
+  .square {
+    width: 80%;
+    margin-top: 0px;
+  }
+  .back-square {
+    width: 240px;
+    height: 100px;
+    margin: 20px 0;
+  }
+  h1 {
+    padding: 8px 0 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .works-flex {
+    display: block;
+  }
+  .works-flex p {
+    margin: 8px 0 24px;
+}
+  .grid {
+    display: block;
+  }
+  .skill-text p {
+    line-height: 24px;
+  }
+  .about-flex {
+    display: block;
+    width:  100%;
+  }
+  .about-flex img {
+    padding: 0;
+    display: block;
+    width: 40%;
+    margin-bottom: 16px;
+  }
+  .about-text {
+    margin: 0 auto;
+  }
+}
