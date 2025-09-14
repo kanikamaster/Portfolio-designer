@@ -376,6 +376,10 @@ footer p {
   margin-top: 24px;
 }
 
+.mock p {
+  background-color: #ECEFCA;
+}
+
 h1, h2, h3, p {
   font-family: 'Merriweather', serif;
   color: #333;
@@ -412,9 +416,6 @@ h1, h2, h3, p {
 
 /* スマホ(width:400px) */
 @media (max-width: 400px) {
-  header {
-    margin: 0;
-  }
   .flex {
     height: 100%;
   }
@@ -438,6 +439,10 @@ h1, h2, h3, p {
   }
   h2 {
     font-size: 20px;
+  }
+  .text p {
+    font-size: 24px;
+    margin-right: 16px;
   }
   .works-flex {
     display: block;
@@ -463,5 +468,37 @@ h1, h2, h3, p {
   }
   .about-text {
     margin: 0 auto;
+  }
+  /* モーダル */
+  .modal-overlay {
+    max-width: 100%;
+  }
+  .modal-content {
+    width: 90%;
+    background-color: #f5f5f5;
+  }
+  .modal-content img {
+    width: 100%;
+  }
+  .close-modal {
+    top: 0px;
+    right: 10px;
+  }
+  .mock {
+    width: 100%;
+  }
+  .mock h2, h3 {
+    font-size: 16px;
+    font-weight: normal;
+    overflow-wrap: break-word;
+  }
+  .mock .mobile-title .mobile {
+    display: block;
+  }
+  .mock p {
+    width: 100%;
+    padding: 2px;
+    margin-left: auto;
+    overflow-wrap: break-word;
   }
 }
